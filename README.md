@@ -1,4 +1,4 @@
-## A port of the LiquidCrystal (HD4470)  Arduino library for the Raspberry Pi using Python
+## A port of the LiquidCrystal (HD44780)  Arduino library for the Raspberry Pi using Python
 
 ### Currently supports 4-bit mode only (8/26/17)
 
@@ -32,15 +32,19 @@ See [HelloWorldPi.py](https://github.com/kurimawxx00/LiquidCrystalPi/blob/master
 ### Available Commands (as of 8/26/2017):
 
  ```python
- command(int)
+ command(value)                 #send a command
 
- write(string)
+ write(string or character)     #write a string or character
 
- clear()
+ clear()                        #clear LCD screen
 
- home()
+ home()                         #set cursor to row 1, col 1
 
- nextline()
+ nextline()                     #set cursor to row 2
+
+ moveright()                    #move cursor one position to the right
+
+ moveleft()                     #move cursor one position to the left
  ```
 
 ### The contents of this library and README will be continuously updated.
