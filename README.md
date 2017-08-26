@@ -4,6 +4,10 @@
 
 ### Usage:
 
+Wire LCD pins RS, E, D4 to D7 to any GPIO pins. Example: ![RPi LCD](http://www.teachmemicro.com/wp-content/uploads/2017/08/RPi-LCD.jpg)
+
+ 
+
 Import LiquidCrystalPi and initiate class LCD:
 
 ```python
