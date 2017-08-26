@@ -10,20 +10,24 @@ Import LiquidCrystalPi and initiate class LCD:
 import LiquidCrystalPi
 
 LCD = LiquidCrystalPi.LCD(<rs>,<enable>,<d4>,<d5>,<d6>,<d7>)
-LCD.begin(16, 2)
+LCD.begin(<columns>, <lines>)
 ```
 
 Write string:
 
 ```python
-LCD.write("Hello World")
+LCD.write("<string>")
 ```
+
+Also needs RPi.GPIO as import
+
 
 See [HelloWorldPi.py](https://github.com/kurimawxx00/LiquidCrystalPi/blob/master/HelloWorldPi.py) for complete code
 
 
 ### Available Commands (as of 8/26/2017):
 
+ ```python
  command(int)
 
  write(string)
@@ -33,6 +37,7 @@ See [HelloWorldPi.py](https://github.com/kurimawxx00/LiquidCrystalPi/blob/master
  home()
 
  nextline()
+ ```
 
 ### The contents of this library and README will be continuously updated.
 
