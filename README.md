@@ -1,17 +1,37 @@
-##A port of the LiquidCrystal Arduino library for the Raspberry Pi using Python
+## A port of the LiquidCrystal Arduino library for the Raspberry Pi using Python
 
-###Available Commands (as of 8/26/2017):
+### Usage:
 
- LCD_command(int)
+Import LiquidCrystalPi and initiate class LCD:
 
- LCD_write(string)
+```python
+import LiquidCrystalPi
 
- LCD_clear()
+LCD = LiquidCrystalPi.LCD(<rs>,<enable>,<d4>,<d5>,<d6>,<d7>)
+LCD.begin(16, 2)
+```
 
- LCD_home()
+Write string:
 
- LCD_nextline()
+```python
+LCD.write("Hello World")
+```
 
-###The contents of this library and README will be continuously updated.
+See HelloWorldPi.py for complete code
 
-#LiquidCrystalPi
+
+### Available Commands (as of 8/26/2017):
+
+ command(int)
+
+ write(string)
+
+ clear()
+
+ home()
+
+ nextline()
+
+### The contents of this library and README will be continuously updated.
+
+# LiquidCrystalPi
