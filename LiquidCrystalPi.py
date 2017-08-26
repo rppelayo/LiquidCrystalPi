@@ -64,16 +64,24 @@ class LCD:
 		_row_offsets[3] = row3;
   
 	def clear(self):
-		self.command(0x01)
+		self.command(1)
 		self.time.sleep(0.002)
   
 	def home(self):
-		self.command(0x02)
+		self.command(2)
 		self.time.sleep(0.002)
   
 	def nextline(self):
-		self.command(0x0c)
+		self.command(192)
 		self.time.sleep(0.002)
+
+        def moveright(self):
+                self.command(20)
+                self.time.sleep(0.002)
+       
+        def moveleft(self):
+                self.command(16)
+                self.time.sleep(0.002)
  
 	def display(self):
 		global _displaycontrol
@@ -91,7 +99,6 @@ class LCD:
   
 	def send(self,value, mode):
 		global _rs_pin
-
 		self.GPIO.output(_rs_pin, mode)
 		self.write4bits(value >> 4)
 		self.write4bits(value)
